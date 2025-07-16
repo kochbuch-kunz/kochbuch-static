@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{RECIPE_TITLE}} - Kochbuch Kunz</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {{RECIPE_SCHEMA}}
+    </script>
+</head>
+<body data-view="{{RECIPE_VIEW}}">
+    <div class="container">
+        <header>
+            <h1>🍽️ Kochbuch Kunz</h1>
+            <div class="subtitle">Familie & ADHS-optimiert</div>
+            <div class="admin-link">
+                <a href="admin.html" class="admin-button">⚙️ Admin</a>
+            </div>
+        </header>
+
+        <!-- Übersicht (nur bei index.html) -->
+        <div class="search-filters" id="searchFilters">
+            <input type="text" class="search-box" placeholder="🔍 Rezept suchen..." id="searchInput">
+            
+            <div class="filter-chips">
+                <div class="filter-chip active" data-filter="all">🌟 Alle</div>
+                <div class="filter-chip" data-filter="joker">🃏 Joker</div>
+                <div class="filter-chip" data-filter="vegan">🌱 Vegan</div>
+                <div class="filter-chip" data-filter="schnell">⚡ Schnell</div>
+                <div class="filter-chip" data-filter="vorratskammer">🏠 Vorrat</div>
+                <div class="filter-chip" data-filter="protein">💪 Protein</div>
+                <div class="filter-chip" data-filter="familie">👨‍👩‍👧‍👦 Familie</div>
+            </div>
+            
+            <div class="stats" id="recipeStats">Lade Rezepte...</div>
+        </div>
+
+        <div class="recipe-grid" id="recipeGrid">
+            <div class="loading">Lade deine Lieblings-Rezepte...</div>
+        </div>
+
+        <div class="no-results" id="noResults" style="display: none;">
+            <div class="no-results-icon">🤷‍♀️</div>
+            <h3>Keine passenden Rezepte gefunden</h3>
+            <p>Versuche andere Suchbegriffe oder Filter</p>
+        </div>
+
+        <!-- Einzelrezept (nur bei Rezept-Seiten) -->
+        <div class="single-recipe-view" id="singleRecipeView">
+            {{RECIPE_CONTENT}}
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

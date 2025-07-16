@@ -1,0 +1,12 @@
+{
+  "name": "kochbuch-kunz",
+  "version": "1.0.0",
+  "description": "Familie & ADHS-optimierte Rezepte",
+  "scripts": {
+    "build": "node build-static-site.js",
+    "dev": "node build-static-site.js && python -m http.server 8000",
+    "clean": "rm -rf dist/"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

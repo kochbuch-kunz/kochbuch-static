@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚙️ Admin - Kochbuch Kunz</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh; color: #333; line-height: 1.6; padding: 1rem;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header { 
+            background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
+            padding: 2rem; margin-bottom: 2rem; border-radius: 20px;
+            text-align: center; box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        h1 { 
+            font-size: 2rem; margin-bottom: 0.5rem; 
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .back-link { 
+            display: inline-block; margin-bottom: 1rem; padding: 8px 16px;
+            background: rgba(102,126,234,0.2); border-radius: 10px; text-decoration: none;
+            color: #667eea; font-weight: 500; transition: all 0.3s ease;
+        }
+        .back-link:hover { background: rgba(102,126,234,0.3); }
+        
+        .admin-section { 
+            background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
+            padding: 2rem; margin-bottom: 2rem; border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        .section-title { 
+            font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;
+            color: #333; border-bottom: 2px solid #667eea; padding-bottom: 0.5rem;
+        }
+        
+        .form-group { margin-bottom: 1.5rem; }
+        label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333; }
+        input, textarea, select { 
+            width: 100%; padding: 12px; border: 2px solid rgba(102,126,234,0.2);
+            border-radius: 10px; font-size: 14px; transition: all 0.3s ease;
+        }
+        input:focus, textarea:focus, select:focus { 
+            outline: none; border-color: #667eea; box-shadow: 0 0 10px rgba(102,126,234,0.2);
+        }
+        textarea { resize: vertical; min-height: 100px; }
+        
+        .tag-selector { 
+            display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem;
+        }
+        .tag-option { 
+            padding: 6px 12px; border: 2px solid rgba(102,126,234,0.2);
+            border-radius: 15px; cursor: pointer; font-size: 12px;
+            transition: all 0.3s ease; user-select: none;
+        }
+        .tag-option.selected { 
+            background: #667eea; color: white; border-color: #667eea;
+        }
+        
+        .ingredient-list, .instruction-list { 
+            border: 2px solid rgba(102,126,234,0.2); border-radius: 10px; 
+            padding: 1rem; background: rgba(102,126,234,0.05);
+        }
+        .ingredient-item, .instruction-item { 
+            display: flex; gap: 0.5rem; margin-bottom: 0.5rem; align-items: center;
+        }
+        .ingredient-item input { flex: 1; margin-bottom: 0; }
+        .instruction-item { align-items: flex-start; }
+        .instruction-item textarea { flex: 1; margin-bottom: 0; min-height: 60px; }
+        
+        .btn { 
+            padding: 10px 20px; border: none; border-radius: 10px;
+            font-weight: 600; cursor: pointer; transition: all 0.3s ease;
+            text-decoration: none; display: inline-block; text-align: center;
+        }
+        .btn-primary { background: linear-gradient(45deg, #667eea, #764ba2); color: white; }
+        .btn-secondary { background: rgba(102,126,234,0.2); color: #667eea; }
+        .btn-danger { background: #dc2626; color: white; }
+        .btn-small { padding: 6px 12px; font-size: 12px; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        
+        .export-area { 
+            background: #f8f9fa; border: 2px solid #e9ecef; border-radius: 10px;
+            padding: 1rem; margin-top: 1rem; font-family: monospace; font-size: 12px;
+            white-space: pre-wrap; word-break: break-all; max-height: 300px; overflow-y: auto;
+        }
+        
+        .recipe-list { 
+            display: grid; gap: 1rem;
+        }
+        .recipe-item { 
+            background: rgba(102,126,234,0.1); padding: 1rem; border-radius: 10px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .recipe-info h3 { margin-bottom: 0.25rem; }
+        .recipe-info small { color: #666; }
+        .recipe-actions { display: flex; gap: 0.5rem; }
+        
+        .notification { 
+            position: fixed; top: 20px; right: 20px; padding: 1rem 1.5rem;
+            border-radius: 10px; color: white; font-weight: 600; z-index: 1000;
+            transform: translateX(400px); transition: transform 0.3s ease;
+        }
+        .notification.show { transform: translateX(0); }
+        .notification.success { background: #059669; }
+        .notification.error { background: #dc2626; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 0.5rem; }
+            .ingredient-item, .instruction-item { flex-direction: column; align-items: stretch; }
+            .recipe-item { flex-direction: column; align-items: stretch; gap: 1rem; }
+            .recipe-actions { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="index.html" class="back-link">← Zurück zur Website</a>
+            <h1>⚙️ Admin - Kochbuch Kunz</h1>
+            <p>Rezepte verwalten • Einfach & übersichtlich</p>
+        </div>
+
+        <!-- Rezepte verwalten -->
+        <div class="admin-section">
+            <h2 class="section-title">📋 Vorhandene Rezepte</h2>
+            <div id="recipeList" class="recipe-list">
+                <div style="text-align: center; color: #666; padding: 2rem;">
+                    Lade Rezepte...
+                </div>
+            </div>
+        </div>
+
+        <!-- Neues Rezept hinzufügen -->
+        <div class="admin-section">
+            <h2 class="section-title">➕ Neues Rezept hinzufügen</h2>
+            <form id="recipeForm">
+                <div class="form-group">
+                    <label for="recipeName">Rezept-Name</label>
+                    <input type="text" id="recipeName" required placeholder="z.B. Cashew-Brokkoli-Pasta">
+                </div>
+                
+                <div class="form-group">
+                    <label for="recipeTime">Zubereitungszeit</label>
+                    <input type="text" id="recipeTime" required placeholder="z.B. 25min">
+                </div>
+                
+                <div class="form-group">
+                    <label for="recipeDescription">Beschreibung</label>
+                    <textarea id="recipeDescription" required placeholder="Kurze Beschreibung des Rezepts..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Tags auswählen</label>
+                    <div class="tag-selector">
+                        <div class="tag-option" data-tag="vegan">🌱 vegan</div>
+                        <div class="tag-option" data-tag="vegetarisch">🥛 vegetarisch</div>
+                        <div class="tag-option" data-tag="joker">🃏 joker</div>
+                        <div class="tag-option" data-tag="vorratskammer">🏠 vorratskammer</div>
+                        <div class="tag-option" data-tag="protein">💪 protein</div>
+                        <div class="tag-option" data-tag="schnell">⚡ schnell</div>
+                        <div class="tag-option" data-tag="familie">👨‍👩‍👧‍👦 familie</div>
+                        <div class="tag-option" data-tag="meal-prep">🍱 meal-prep</div>
+                        <div class="tag-option" data-tag="frühstück">🥞 frühstück</div>
+                    </div>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem;">
+                    <div class="form-group">
+                        <label for="recipeKcal">Kalorien</label>
+                        <input type="number" id="recipeKcal" placeholder="285">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipeProtein">Protein</label>
+                        <input type="text" id="recipeProtein" placeholder="16g">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipeCarbs">Kohlenhydrate</label>
+                        <input type="text" id="recipeCarbs" placeholder="35g">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipeFat">Fett</label>
+                        <input type="text" id="recipeFat" placeholder="8g">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Zutaten</label>
+                    <div id="ingredientList" class="ingredient-list">
+                        <div class="ingredient-item">
+                            <input type="text" placeholder="Zutat" class="ingredient-name">
+                            <input type="text" placeholder="Menge" class="ingredient-amount" style="max-width: 120px;">
+                            <button type="button" class="btn btn-danger btn-small" onclick="removeIngredient(this)">×</button>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-secondary" style="margin-top: 0.5rem;" onclick="addIngredient()">+ Zutat hinzufügen</button>
+                </div>
+                
+                <div class="form-group">
+                    <label>Zubereitung</label>
+                    <div id="instructionList" class="instruction-list">
+                        <div class="instruction-item">
+                            <textarea placeholder="Zubereitungsschritt..." class="instruction-text"></textarea>
+                            <button type="button" class="btn btn-danger btn-small" onclick="removeInstruction(this)">×</button>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-secondary" style="margin-top: 0.5rem;" onclick="addInstruction()">+ Schritt hinzufügen</button>
+                </div>
+                
+                <div class="form-group">
+                    <label for="familyNotes">Familie-Hinweise (optional)</label>
+                    <textarea id="familyNotes" placeholder="Tipps für die Familie..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Rezept hinzufügen</button>
+            </form>
+        </div>
+
+        <!-- Export -->
+        <div class="admin-section">
+            <h2 class="section-title">📤 Export für GitHub</h2>
+            <p style="margin-bottom: 1rem; color: #666;">
+                Nach Änderungen: JSON kopieren und in GitHub als recipes.json hochladen
+            </p>
+            <button class="btn btn-primary" onclick="exportRecipes()">📋 JSON generieren</button>
+            <div id="exportOutput" class="export-area" style="display: none;"></div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <script>
+        let recipes = [];
+        let editingRecipeId = null;
+
+        // DOM Ready
+        document.addEventListener('DOMContentLoaded', function() {
+            loadRecipes();
+            setupEventListeners();
+        });
+
+        // Event Listeners
+        function setupEventListeners() {
+            // Tag-Auswahl
+            document.querySelectorAll('.tag-option').forEach(tag => {
+                tag.addEventListener('click', function() {
+                    this.classList.toggle('selected');
+                });
+            });
+
+            // Form Submit
+            document.getElementById('recipeForm').addEventListener('submit', handleFormSubmit);
+        }
+
+        // Rezepte laden
+        async function loadRecipes() {
+            try {
+                const response = await fetch('recipes.json');
+                const data = await response.json();
+                recipes = data.recipes || [];
+                renderRecipeList();
+            } catch (error) {
+                console.error('Fehler beim Laden der Rezepte:', error);
+                showNotification('Fehler beim Laden der Rezepte', 'error');
+            }
+        }
+
+        // Rezeptliste rendern
+        function renderRecipeList() {
+            const list = document.getElementById('recipeList');
+            
+            if (recipes.length === 0) {
+                list.innerHTML = '<div style="text-align: center; color: #666; padding: 2rem;">Noch keine Rezepte vorhanden</div>';
+                return;
+            }
+
+            list.innerHTML = recipes.map(recipe => `
+                <div class="recipe-item">
+                    <div class="recipe-info">
+                        <h3>${recipe.name}</h3>
+                        <small>${recipe.time} • ${recipe.tags.join(', ')}</small>
+                    </div>
+                    <div class="recipe-actions">
+                        <button class="btn btn-secondary btn-small" onclick="editRecipe('${recipe.id}')">✏️ Bearbeiten</button>
+                        <button class="btn btn-danger btn-small" onclick="deleteRecipe('${recipe.id}')">🗑️ Löschen</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Zutaten/Schritte hinzufügen
+        function addIngredient() {
+            const list = document.getElementById('ingredientList');
+            const item = document.createElement('div');
+            item.className = 'ingredient-item';
+            item.innerHTML = `
+                <input type="text" placeholder="Zutat" class="ingredient-name">
+                <input type="text" placeholder="Menge" class="ingredient-amount" style="max-width: 120px;">
+                <button type="button" class="btn btn-danger btn-small" onclick="removeIngredient(this)">×</button>
+            `;
+            list.appendChild(item);
+        }
+
+        function removeIngredient(btn) {
+            btn.parentElement.remove();
+        }
+
+        function addInstruction() {
+            const list = document.getElementById('instructionList');
+            const item = document.createElement('div');
+            item.className = 'instruction-item';
+            item.innerHTML = `
+                <textarea placeholder="Zubereitungsschritt..." class="instruction-text"></textarea>
+                <button type="button" class="btn btn-danger btn-small" onclick="removeInstruction(this)">×</button>
+            `;
+            list.appendChild(item);
+        }
+
+        function removeInstruction(btn) {
+            btn.parentElement.remove();
+        }
+
+        // Form Submit
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            
+            const formData = getFormData();
+            if (!formData) return;
+
+            if (editingRecipeId) {
+                // Rezept bearbeiten
+                const index = recipes.findIndex(r => r.id === editingRecipeId);
+                if (index !== -1) {
+                    recipes[index] = { ...formData, id: editingRecipeId };
+                    showNotification('Rezept erfolgreich bearbeitet!', 'success');
+                }
+                editingRecipeId = null;
+            } else {
+                // Neues Rezept hinzufügen
+                formData.id = generateId(formData.name);
+                recipes.push(formData);
+                showNotification('Rezept erfolgreich hinzugefügt!', 'success');
+            }
+
+            resetForm();
+            renderRecipeList();
+        }
+
+        // Form-Daten sammeln
+        function getFormData() {
+            const name = document.getElementById('recipeName').value.trim();
+            const time = document.getElementById('recipeTime').value.trim();
+            const description = document.getElementById('recipeDescription').value.trim();
+
+            if (!name || !time || !description) {
+                showNotification('Bitte alle Pflichtfelder ausfüllen', 'error');
+                return null;
+            }
+
+            // Tags sammeln
+            const tags = Array.from(document.querySelectorAll('.tag-option.selected'))
+                .map(tag => tag.dataset.tag);
+
+            // Zutaten sammeln
+            const ingredients = Array.from(document.querySelectorAll('.ingredient-item'))
+                .map(item => ({
+                    name: item.querySelector('.ingredient-name').value.trim(),
+                    amount: item.querySelector('.ingredient-amount').value.trim()
+                }))
+                .filter(ing => ing.name && ing.amount);
+
+            // Zubereitungsschritte sammeln
+            const instructions = Array.from(document.querySelectorAll('.instruction-text'))
+                .map(textarea => textarea.value.trim())
+                .filter(step => step);
+
+            if (ingredients.length === 0) {
+                showNotification('Bitte mindestens eine Zutat hinzufügen', 'error');
+                return null;
+            }
+
+            if (instructions.length === 0) {
+                showNotification('Bitte mindestens einen Zubereitungsschritt hinzufügen', 'error');
+                return null;
+            }
+
+            return {
+                name,
+                time,
+                tags,
+                description,
+                nutrition: {
+                    kcal: parseInt(document.getElementById('recipeKcal').value) || 0,
+                    protein: document.getElementById('recipeProtein').value.trim() || '0g',
+                    carbs: document.getElementById('recipeCarbs').value.trim() || '0g',
+                    fat: document.getElementById('recipeFat').value.trim() || '0g'
+                },
+                ingredients,
+                instructions,
+                familyNotes: document.getElementById('familyNotes').value.trim()
+            };
+        }
+
+        // ID generieren
+        function generateId(name) {
+            return name.toLowerCase()
+                .replace(/[äöüß]/g, match => ({ 'ä': 'ae', 'ö': 'oe', 'ü': 'ue', 'ß': 'ss' }[match]))
+                .replace(/[^a-z0-9]/g, '-')
+                .replace(/-+/g, '-')
+                .replace(/^-|-$/g, '');
+        }
+
+        // Rezept bearbeiten
+        function editRecipe(id) {
+            const recipe = recipes.find(r => r.id === id);
+            if (!recipe) return;
+
+            editingRecipeId = id;
+            
+            // Formular füllen
+            document.getElementById('recipeName').value = recipe.name;
+            document.getElementById('recipeTime').value = recipe.time;
+            document.getElementById('recipeDescription').value = recipe.description;
+            document.getElementById('recipeKcal').value = recipe.nutrition.kcal;
+            document.getElementById('recipeProtein').value = recipe.nutrition.protein;
+            document.getElementById('recipeCarbs').value = recipe.nutrition.carbs;
+            document.getElementById('recipeFat').value = recipe.nutrition.fat;
+            document.getElementById('familyNotes').value = recipe.familyNotes || '';
+
+            // Tags auswählen
+            document.querySelectorAll('.tag-option').forEach(tag => {
+                tag.classList.toggle('selected', recipe.tags.includes(tag.dataset.tag));
+            });
+
+            // Zutaten laden
+            const ingredientList = document.getElementById('ingredientList');
+            ingredientList.innerHTML = '';
+            recipe.ingredients.forEach(ing => {
+                const item = document.createElement('div');
+                item.className = 'ingredient-item';
+                item.innerHTML = `
+                    <input type="text" placeholder="Zutat" class="ingredient-name" value="${ing.name}">
+                    <input type="text" placeholder="Menge" class="ingredient-amount" style="max-width: 120px;" value="${ing.amount}">
+                    <button type="button" class="btn btn-danger btn-small" onclick="removeIngredient(this)">×</button>
+                `;
+                ingredientList.appendChild(item);
+            });
+
+            // Schritte laden
+            const instructionList = document.getElementById('instructionList');
+            instructionList.innerHTML = '';
+            recipe.instructions.forEach(step => {
+                const item = document.createElement('div');
+                item.className = 'instruction-item';
+                item.innerHTML = `
+                    <textarea placeholder="Zubereitungsschritt..." class="instruction-text">${step}</textarea>
+                    <button type="button" class="btn btn-danger btn-small" onclick="removeInstruction(this)">×</button>
+                `;
+                instructionList.appendChild(item);
+            });
+
+            // Scroll zum Formular
+            document.querySelector('.admin-section:nth-child(3)').scrollIntoView({ behavior: 'smooth' });
+            showNotification('Rezept zum Bearbeiten geladen', 'success');
+        }
+
+        // Rezept löschen
+        function deleteRecipe(id) {
+            const recipe = recipes.find(r => r.id === id);
+            if (!recipe) return;
+
+            if (confirm(`Rezept "${recipe.name}" wirklich löschen?`)) {
+                recipes = recipes.filter(r => r.id !== id);
+                renderRecipeList();
+                showNotification('Rezept gelöscht', 'success');
+            }
+        }
+
+        // Formular zurücksetzen
+        function resetForm() {
+            document.getElementById('recipeForm').reset();
+            document.querySelectorAll('.tag-option.selected').forEach(tag => {
+                tag.classList.remove('selected');
+            });
+            
+            // Zutaten/Schritte zurücksetzen
+            document.getElementById('ingredientList').innerHTML = `
+                <div class="ingredient-item">
+                    <input type="text" placeholder="Zutat" class="ingredient-name">
+                    <input type="text" placeholder="Menge" class="ingredient-amount" style="max-width: 120px;">
+                    <button type="button" class="btn btn-danger btn-small" onclick="removeIngredient(this)">×</button>
+                </div>
+            `;
+            
+            document.getElementById('instructionList').innerHTML = `
+                <div class="instruction-item">
+                    <textarea placeholder="Zubereitungsschritt..." class="instruction-text"></textarea>
+                    <button type="button" class="btn btn-danger btn-small" onclick="removeInstruction(this)">×</button>
+                </div>
+            `;
+        }
+
+        // JSON exportieren
+        function exportRecipes() {
+            const output = document.getElementById('exportOutput');
+            const jsonData = JSON.stringify({ recipes }, null, 2);
+            
+            output.textContent = jsonData;
+            output.style.display = 'block';
+            
+            // JSON in Zwischenablage kopieren
+            navigator.clipboard.writeText(jsonData).then(() => {
+                showNotification('JSON in Zwischenablage kopiert!', 'success');
+            }).catch(() => {
+                showNotification('JSON generiert - bitte manuell kopieren', 'success');
+            });
+        }
+
+        // Notification anzeigen
+        function showNotification(message, type = 'success') {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.className = `notification ${type}`;
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
