@@ -59,9 +59,8 @@
       "familyNotes": "🍝 Vielseitig: Zu Pasta, Reis, Vollkornbrot. Mann kann Bratwurst-Scheiben anbraten und dazugeben."
     },
     {
-      "id": "hummus",
       "name": "Hummus (selbstgemacht)",
-      "time": "5min",
+      "time": "10min",
       "tags": [
         "vegan",
         "joker",
@@ -119,7 +118,8 @@
         "Abschmecken: mehr Zitrone für Frische, mehr Salz für Intensität",
         "In Schüssel geben, mit Paprikapulver bestreuen und Olivenöl beträufeln"
       ],
-      "familyNotes": "🥕 Perfekt mit Gemüsesticks, gerösteten Möhren oder als Brotaufstrich. Hält 1 Woche im Kühlschrank!"
+      "familyNotes": "🥕 Perfekt mit Gemüsesticks, gerösteten Möhren oder als Brotaufstrich. Hält 1 Woche im Kühlschrank!",
+      "id": "hummus"
     },
     {
       "id": "chili-sin-carne",
