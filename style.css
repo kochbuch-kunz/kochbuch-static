@@ -624,13 +624,7 @@ body[data-view="all"] .single-recipe-view {
         flex-direction: column;
         justify-content: center;
     }
-}
 
-   @media (max-width: 600px) {
-    .single-recipe-content .nutrition-grid {
-        grid-template-columns: repeat(2, 1fr); /* NEU: 2 Spalten auf kleineren Geräten */
-    }
-}
 .single-recipe-content .nutrition-value {
     font-size: 1rem;
     font-weight: 700;
