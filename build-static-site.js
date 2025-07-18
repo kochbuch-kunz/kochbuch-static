@@ -137,7 +137,7 @@ recipes.forEach(recipe => {
                     </div>
                     <div class="nutrition-item">
                         <div class="nutrition-value">${recipe.nutrition.carbs}</div>
-                        <div class="nutrition-label">Kohlenhydrate</div>
+                        <div class="nutrition-label">KH</div>
                     </div>
                     <div class="nutrition-item">
                         <div class="nutrition-value">${recipe.nutrition.fat}</div>
