@@ -155,7 +155,7 @@ h1 {
     transition: all 0.3s ease;
     cursor: pointer;
     border: 1px solid var(--border);
-    padding: 20px;
+    padding: 15px;
 }
 
 .recipe-card:hover {
@@ -169,7 +169,7 @@ h1 {
 }
 
 .recipe-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: var(--text);
