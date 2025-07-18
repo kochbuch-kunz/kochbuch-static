@@ -560,7 +560,8 @@ body[data-view="all"] .single-recipe-view {
 /* Responsive Design */
 @media (max-width: 768px) {
     .container { 
-        padding: 1rem; 
+        padding: 0 !important; 
+        margin: 0 !important;
     }
     
     .recipe-grid {
