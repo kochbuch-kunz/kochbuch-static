@@ -603,10 +603,12 @@ body[data-view="all"] .single-recipe-view {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 0.5rem !important;
         padding: 0 !important;
+        maring: 0 !important;
     }
     
     .single-recipe-content .nutrition-item {
         padding: 0.5rem !important;
+        margin: 0 !important;
     }
     
     .single-recipe-content .nutrition-value {
@@ -646,7 +648,8 @@ body[data-view="all"] .single-recipe-view {
         height: 30px;
     }
     .single-recipe-content {
-    padding: 1rem !important;
+    padding: 0rem !important;
+    margin: 0 !important;
     overflow-x: hidden;
     }
 }
