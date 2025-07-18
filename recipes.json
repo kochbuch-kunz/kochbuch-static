@@ -5,6 +5,7 @@
       "name": "Basis-Linsen-Gemüse-Pfanne",
       "time": "15min",
       "tags": ["vegan", "joker", "vorratskammer", "protein", "schnell", "familie"],
+      "recipeYield": "3 Portionen"
       "description": "🃏 JOKER - Multi-Nährstoff-Powerhouse! Protein + Folsäure + Eisen + Vitamin K. Express und vielseitig.",
       "nutrition": {
         "kcal": 285,
@@ -35,6 +36,7 @@
       "name": "Hummus (selbstgemacht)",
       "time": "10min",
       "tags": ["vegan", "joker", "vorratskammer", "protein", "schnell"],
+      "recipeYield": "4 Portionen"
       "description": "🃏 JOKER - Protein-Dip & vielseitige Basis! Multi-Verwendung: Dip, Brotaufstrich, Sauce, leichte Mahlzeit.",
       "nutrition": {
         "kcal": 185,
@@ -68,6 +70,7 @@
       "name": "Chili sin Carne",
       "time": "30min",
       "tags": ["vegan", "vorratskammer", "protein", "familie"],
+      "recipeYield": "6 Portionen"
       "description": "Herzhaft und wärmend! 100% Vorrat-verfügbar mit Kidneybohnen, schwarzen Bohnen und Mais.",
       "nutrition": {
         "kcal": 265,
