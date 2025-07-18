@@ -614,7 +614,7 @@ body[data-view="all"] .single-recipe-view {
     
     .single-recipe-content .nutrition-item {
         width: 100%;
-        aspect-ratio: 1 / 1
+        aspect-ratio: 1 / 1;
         padding: 0.75rem;
         text-align: center;
         border: 1px solid var(--border);
@@ -624,12 +624,13 @@ body[data-view="all"] .single-recipe-view {
         flex-direction: column;
         justify-content: center;
     }
-    @media (max-width: 600px) {
+}
+
+   @media (max-width: 600px) {
     .single-recipe-content .nutrition-grid {
         grid-template-columns: repeat(2, 1fr); /* NEU: 2 Spalten auf kleineren Geräten */
     }
 }
-
 .single-recipe-content .nutrition-value {
     font-size: 1rem;
     font-weight: 700;
@@ -691,6 +692,4 @@ body[data-view="all"] .single-recipe-view {
     margin: 0 !important;
     overflow-x: hidden;
     }
-}
-
 }
