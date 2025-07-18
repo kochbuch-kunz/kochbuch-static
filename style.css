@@ -602,25 +602,41 @@ body[data-view="all"] .single-recipe-view {
     
     /* Mobile-optimierte Nährwerte - 2x2 Grid */
     .single-recipe-content .nutrition-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 0.5rem !important;
-        padding: 0 !important;
-        maring: 0 !important;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 1rem;
     }
     
     .single-recipe-content .nutrition-item {
-        padding: 0.5rem !important;
-        margin: 0 !important;
+        width: 100%;
+        min-width: 120px;
+        padding: 0.75rem;
+        text-align: center;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--surface);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
     }
     
     .single-recipe-content .nutrition-value {
-        font-size: 1rem !important;
-        margin-bottom: 0.2rem !important;
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--accent);
+        margin-bottom: 0.25rem;
     }
     
     .single-recipe-content .nutrition-label {
-        font-size: 0.7rem !important;
-        line-height: 1.2 !important;
+       font-size: 0.75rem;
+        color: var(--text-secondary);
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 0.5px;
     }
     
     .single-recipe-header {
