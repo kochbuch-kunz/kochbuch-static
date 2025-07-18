@@ -602,19 +602,20 @@ body[data-view="all"] .single-recipe-view {
     .single-recipe-content .nutrition-grid {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 0.5rem !important;
+        padding: 0 !important;
     }
     
     .single-recipe-content .nutrition-item {
-        padding: 0.75rem !important;
+        padding: 0.5rem !important;
     }
     
     .single-recipe-content .nutrition-value {
-        font-size: 1.25rem !important;
-        margin-bottom: 0.25rem !important;
+        font-size: 1rem !important;
+        margin-bottom: 0.2rem !important;
     }
     
     .single-recipe-content .nutrition-label {
-        font-size: 0.75rem !important;
+        font-size: 0.7rem !important;
         line-height: 1.2 !important;
     }
     
@@ -644,4 +645,10 @@ body[data-view="all"] .single-recipe-view {
         width: 30px;
         height: 30px;
     }
+    .single-recipe-content {
+    padding: 1rem !important;
+    overflow-x: hidden;
+    }
+}
+
 }
