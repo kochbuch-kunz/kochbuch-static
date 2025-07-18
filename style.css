@@ -603,19 +603,17 @@ body[data-view="all"] .single-recipe-view {
     /* Mobile-optimierte Nährwerte - 2x2 Grid */
     .single-recipe-content .nutrition-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        grid-template-columns: repeat(2,  minmax(100px, 140px));
+        gap: 0.75rem;
         justify-content: center;
-        margin-top: 1rem;
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto
+        margin: 1rem auto 0;
+        max-width: 100&
     }
     
     .single-recipe-content .nutrition-item {
         width: 100%;
-        aspect-ratio: 1 / 1;
-        padding: 0.75rem;
+        padding: 0.5rem;
+        aspect-ratio: auto; /* quadratisch rausnehmen */
         text-align: center;
         border: 1px solid var(--border);
         border-radius: var(--radius);
