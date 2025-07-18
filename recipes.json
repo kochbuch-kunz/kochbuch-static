@@ -4,14 +4,7 @@
       "id": "basis-linsen-gemuse-pfanne",
       "name": "Basis-Linsen-Gemüse-Pfanne",
       "time": "15min",
-      "tags": [
-        "vegan",
-        "joker",
-        "vorratskammer",
-        "protein",
-        "schnell",
-        "familie"
-      ],
+      "tags": ["vegan", "joker", "vorratskammer", "protein", "schnell", "familie"],
       "description": "🃏 JOKER - Multi-Nährstoff-Powerhouse! Protein + Folsäure + Eisen + Vitamin K. Express und vielseitig.",
       "nutrition": {
         "kcal": 285,
@@ -20,34 +13,13 @@
         "fat": "8g"
       },
       "ingredients": [
-        {
-          "name": "Vorgekochte rote Linsen",
-          "amount": "1 Tasse"
-        },
-        {
-          "name": "TK-Spinat oder frischer Spinat",
-          "amount": "200g"
-        },
-        {
-          "name": "Stückige Tomaten",
-          "amount": "1 Dose"
-        },
-        {
-          "name": "Zwiebel",
-          "amount": "1 mittelgroße"
-        },
-        {
-          "name": "Olivenöl",
-          "amount": "2 EL"
-        },
-        {
-          "name": "Knoblauch",
-          "amount": "2 Zehen"
-        },
-        {
-          "name": "Salz, Pfeffer",
-          "amount": "nach Geschmack"
-        }
+        { "name": "Vorgekochte rote Linsen", "amount": "1 Tasse" },
+        { "name": "TK-Spinat oder frischer Spinat", "amount": "200g" },
+        { "name": "Stückige Tomaten", "amount": "1 Dose" },
+        { "name": "Zwiebel", "amount": "1 mittelgroße" },
+        { "name": "Olivenöl", "amount": "2 EL" },
+        { "name": "Knoblauch", "amount": "2 Zehen" },
+        { "name": "Salz, Pfeffer", "amount": "nach Geschmack" }
       ],
       "instructions": [
         "Zwiebel würfeln und in Olivenöl andünsten bis glasig (ca. 3-4 Min)",
@@ -59,15 +31,10 @@
       "familyNotes": "🍝 Vielseitig: Zu Pasta, Reis, Vollkornbrot. Mann kann Bratwurst-Scheiben anbraten und dazugeben."
     },
     {
+      "id": "hummus",
       "name": "Hummus (selbstgemacht)",
       "time": "10min",
-      "tags": [
-        "vegan",
-        "joker",
-        "vorratskammer",
-        "protein",
-        "schnell"
-      ],
+      "tags": ["vegan", "joker", "vorratskammer", "protein", "schnell"],
       "description": "🃏 JOKER - Protein-Dip & vielseitige Basis! Multi-Verwendung: Dip, Brotaufstrich, Sauce, leichte Mahlzeit.",
       "nutrition": {
         "kcal": 185,
@@ -76,38 +43,14 @@
         "fat": "10g"
       },
       "ingredients": [
-        {
-          "name": "Kichererbsen",
-          "amount": "1 Dose (400g)"
-        },
-        {
-          "name": "Tahin (Sesammus)",
-          "amount": "3 EL"
-        },
-        {
-          "name": "Citrovin (Zitronensaft)",
-          "amount": "2 EL"
-        },
-        {
-          "name": "Olivenöl",
-          "amount": "3 EL"
-        },
-        {
-          "name": "Knoblauchzehe",
-          "amount": "1 große"
-        },
-        {
-          "name": "Kreuzkümmel",
-          "amount": "½ TL"
-        },
-        {
-          "name": "Salz",
-          "amount": "½ TL"
-        },
-        {
-          "name": "Paprikapulver",
-          "amount": "zum Garnieren"
-        }
+        { "name": "Kichererbsen", "amount": "1 Dose (400g)" },
+        { "name": "Tahin (Sesammus)", "amount": "3 EL" },
+        { "name": "Citrovin (Zitronensaft)", "amount": "2 EL" },
+        { "name": "Olivenöl", "amount": "3 EL" },
+        { "name": "Knoblauchzehe", "amount": "1 große" },
+        { "name": "Kreuzkümmel", "amount": "½ TL" },
+        { "name": "Salz", "amount": "½ TL" },
+        { "name": "Paprikapulver", "amount": "zum Garnieren" }
       ],
       "instructions": [
         "Kichererbsen abtropfen, aber Aquafaba (Dosenwasser) aufheben!",
@@ -118,19 +61,13 @@
         "Abschmecken: mehr Zitrone für Frische, mehr Salz für Intensität",
         "In Schüssel geben, mit Paprikapulver bestreuen und Olivenöl beträufeln"
       ],
-      "familyNotes": "🥕 Perfekt mit Gemüsesticks, gerösteten Möhren oder als Brotaufstrich. Hält 1 Woche im Kühlschrank!",
-      "id": "hummus"
+      "familyNotes": "🥕 Perfekt mit Gemüsesticks, gerösteten Möhren oder als Brotaufstrich. Hält 1 Woche im Kühlschrank!"
     },
     {
       "id": "chili-sin-carne",
       "name": "Chili sin Carne",
       "time": "30min",
-      "tags": [
-        "vegan",
-        "vorratskammer",
-        "protein",
-        "familie"
-      ],
+      "tags": ["vegan", "vorratskammer", "protein", "familie"],
       "description": "Herzhaft und wärmend! 100% Vorrat-verfügbar mit Kidneybohnen, schwarzen Bohnen und Mais.",
       "nutrition": {
         "kcal": 265,
@@ -139,42 +76,15 @@
         "fat": "3g"
       },
       "ingredients": [
-        {
-          "name": "Kidneybohnen",
-          "amount": "1 Dose"
-        },
-        {
-          "name": "Schwarze Bohnen",
-          "amount": "1 Dose"
-        },
-        {
-          "name": "Mais",
-          "amount": "1 Dose"
-        },
-        {
-          "name": "Gehackte Tomaten",
-          "amount": "1 Dose"
-        },
-        {
-          "name": "TK-Zwiebeln",
-          "amount": "200g"
-        },
-        {
-          "name": "Kreuzkümmel",
-          "amount": "1 TL"
-        },
-        {
-          "name": "Paprikapulver",
-          "amount": "2 TL"
-        },
-        {
-          "name": "Chili-Pulver",
-          "amount": "½ TL"
-        },
-        {
-          "name": "Olivenöl",
-          "amount": "2 EL"
-        }
+        { "name": "Kidneybohnen", "amount": "1 Dose" },
+        { "name": "Schwarze Bohnen", "amount": "1 Dose" },
+        { "name": "Mais", "amount": "1 Dose" },
+        { "name": "Gehackte Tomaten", "amount": "1 Dose" },
+        { "name": "TK-Zwiebeln", "amount": "200g" },
+        { "name": "Kreuzkümmel", "amount": "1 TL" },
+        { "name": "Paprikapulver", "amount": "2 TL" },
+        { "name": "Chili-Pulver", "amount": "½ TL" },
+        { "name": "Olivenöl", "amount": "2 EL" }
       ],
       "instructions": [
         "TK-Zwiebeln in Olivenöl andünsten, bis sie glasig sind (ca. 5 Min)",
