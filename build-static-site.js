@@ -96,6 +96,7 @@ recipes.forEach(recipe => {
         <div class="single-recipe-content">
             <div class="recipe-description">
                 <p>${recipe.description}</p>
+                ${recipe.recipeYield ? `<p><strong>Portionen:</strong> ${recipe.recipeYield}</p>` : ''}
             </div>
             
             <div class="recipe-section">
