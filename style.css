@@ -250,7 +250,7 @@ h1 {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 8px;
-    padding: 1rem;
+    padding: 0.5rem;
     text-align: center;
     transition: transform 0.2s ease;
 }
@@ -260,14 +260,14 @@ h1 {
 }
 
 .nutrition-value {
-    font-size: 1.5rem;
+    font-size: 0.75rem;
     font-weight: 700;
     color: var(--accent);
     margin-bottom: 0.25rem;
 }
 
 .nutrition-label {
-    font-size: 0.75rem;
+    font-size: 0.5rem;
     color: var(--text-secondary);
     font-weight: 500;
     text-transform: uppercase;
