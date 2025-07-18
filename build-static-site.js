@@ -36,7 +36,7 @@ function generateSchemaLD(recipe) {
         "recipeCategory": recipe.tags.includes('frühstück') ? 'Frühstück' : 
                         recipe.tags.includes('familie') ? 'Hauptgericht' : 'Beilage',
         "recipeCuisine": "Deutsch",
-        "recipeYield": "2-4 Portionen",
+        "recipeYield": recipe.recipeYield,
         "keywords": recipe.tags.join(', '),
         "nutrition": {
             "@type": "NutritionInformation",
