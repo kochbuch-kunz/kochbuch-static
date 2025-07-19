@@ -118,10 +118,10 @@ recipes.forEach(recipe => {
                 </ol>
             </div>
             
-            ${recipe.familyNotes ? `
-                <div class="family-notes">
-                    <div class="family-notes-title">👨‍👩‍👧‍👦 Familie-Hinweise</div>
-                    <div>${recipe.familyNotes}</div>
+            ${recipe.hacksAndTips ? `
+                <div class="hacks-tips">
+                    <div class="hacks-tips-title">💡 Hacks & Tipps</div>
+                    <div>${recipe.hacksAndTips}</div>
                 </div>
             ` : ''}
             
