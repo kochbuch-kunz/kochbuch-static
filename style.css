@@ -527,7 +527,7 @@ body[data-view="all"] .single-recipe-view {
     font-size: 1.1rem;
 }
 
-.family-notes {
+.hacks-tips {
     background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
     border: 1px solid #0ea5e9;
     border-radius: var(--radius-lg);
@@ -535,7 +535,7 @@ body[data-view="all"] .single-recipe-view {
     margin-top: 2rem;
 }
 
-.family-notes-title {
+.hacks-tips-title {
     font-weight: 700;
     color: #0369a1;
     margin-bottom: 0.75rem;
