@@ -215,15 +215,89 @@ h1 {
     gap: 0.25rem;
 }
 
-.tag-vegan { background: #dcfce7; color: #166534; }
-.tag-vegetarisch { background: #fef3c7; color: #92400e; }
-.tag-joker { background: #e0e7ff; color: #3730a3; }
-.tag-vorratskammer { background: #f3e8ff; color: #6b21a8; }
-.tag-protein { background: #fce7f3; color: #be185d; }
-.tag-schnell { background: #fef2f2; color: #dc2626; }
-.tag-familie { background: #ecfdf5; color: #047857; }
-.tag-meal-prep { background: #f0f9ff; color: #0369a1; }
-.tag-frühstück { background: #fffbeb; color: #d97706; }
+/* ========================================
+   TAG-SYSTEM KOMPLETT (62 Tags in 7 Gruppen)
+   ======================================== */
+
+/* === 📦 BASIS-TAGS (Core + Browse-Kategorien) === */
+
+/* Core-Filter (bestehend, beibehalten) */
+.tag-joker { background: #fbbf24; color: #92400e; font-weight: bold; }
+.tag-vorratskammer { background: #10b981; color: white; }
+.tag-schnell { background: #ef4444; color: white; }
+.tag-familie { background: #8b5cf6; color: white; }
+.tag-comfort-food { background: #f87171; color: white; }
+
+/* Browse-Kategorien (NEU) */
+.tag-hauptgericht { background: #dbeafe; color: #1e40af; }
+.tag-frühstück { background: #fef3c7; color: #d97706; }
+.tag-snacks { background: #fef3c7; color: #d97706; }
+.tag-beilagen { background: #dcfce7; color: #166534; }
+.tag-dips { background: #fce7f3; color: #be185d; }
+.tag-saucen { background: #f3e8ff; color: #7c3aed; }
+.tag-aufstriche { background: #fed7d7; color: #c53030; }
+.tag-backen { background: #fff7ed; color: #ea580c; }
+.tag-suppen { background: #ecfdf5; color: #059669; }
+.tag-salate { background: #f0fdf4; color: #15803d; }
+.tag-getränke { background: #dbeafe; color: #0369a1; }
+.tag-desserts { background: #fdf2f8; color: #be185d; }
+.tag-baukasten { background: #f1f5f9; color: #475569; }
+
+/* === 🥗 ERNÄHRUNGS-STIL (Grün-Töne) === */
+.tag-vegan { background: #22c55e; color: white; } /* bestehend */
+.tag-vegetarisch { background: #84cc16; color: white; } /* bestehend */
+.tag-low-carb { background: #f0fdf4; color: #166534; }
+.tag-high-protein { background: #dcfce7; color: #15803d; } /* ersetzt "protein" */
+.tag-ketogen { background: #365314; color: #ecfdf5; }
+
+/* === 🧬 NÄHRSTOFFE (Orange/Gelb-Töne) === */
+.tag-beta-carotin { background: #fff7ed; color: #ea580c; }
+.tag-eisen { background: #fef3c7; color: #d97706; }
+.tag-folsäure { background: #fefce8; color: #ca8a04; }
+.tag-vitamin-k { background: #ecfdf5; color: #059669; }
+.tag-omega-3 { background: #dbeafe; color: #0369a1; }
+.tag-calcium { background: #f8fafc; color: #475569; }
+.tag-vitamin-c { background: #fff7ed; color: #ea580c; }
+.tag-magnesium { background: #fef3c7; color: #d97706; }
+.tag-zink { background: #fefce8; color: #ca8a04; }
+.tag-antioxidantien { background: #f3e8ff; color: #7c3aed; }
+.tag-gute-fette { background: #f0fdf4; color: #166534; }
+.tag-pflanzliche-eiweisse { background: #dcfce7; color: #15803d; }
+.tag-ballaststoffe { background: #fefce8; color: #a16207; }
+.tag-rohkost-anteil { background: #ecfdf5; color: #047857; }
+
+/* === 🍱 MEAL-PREP & ORGANISATION (Blau-Töne) === */
+.tag-meal-prep { background: #3b82f6; color: white; } /* bestehend */
+.tag-tk-geeignet { background: #dbeafe; color: #1e40af; }
+.tag-batch-cooking { background: #e0e7ff; color: #3730a3; }
+.tag-resteverwertung { background: #f0f9ff; color: #0369a1; }
+.tag-saisonal { background: #dcfce7; color: #166534; }
+
+/* === 🚫 OHNE-FILTER (Rot/Rosa-Töne) === */
+.tag-ohne-fisch { background: #f0f9ff; color: #0369a1; }
+.tag-ohne-fleisch { background: #f0fdf4; color: #15803d; }
+.tag-ohne-milchprodukte { background: #fffbeb; color: #d97706; }
+.tag-ohne-nüsse { background: #fef2f2; color: #dc2626; }
+.tag-ohne-gluten { background: #f3e8ff; color: #7c3aed; }
+.tag-ohne-soja { background: #ecfdf5; color: #059669; }
+.tag-zuckerfrei { background: #fdf2f8; color: #be185d; }
+.tag-ohne-mehl { background: #f0f9ff; color: #1d4ed8; }
+
+/* === 🌍 KÜCHEN-STIL (Braun/Beige-Töne) === */
+.tag-asiatisch { background: #fef3c7; color: #d97706; }
+.tag-italienisch { background: #dcfce7; color: #166534; }
+.tag-mediterran { background: #dbeafe; color: #1d4ed8; }
+.tag-orientalisch { background: #fde68a; color: #92400e; }
+.tag-indisch { background: #fed7d7; color: #c53030; }
+.tag-französisch { background: #e0e7ff; color: #3730a3; }
+
+/* === ✅ TEST-STATUS (Grau/Blau-Töne) === */
+.tag-ungetestet { background: #f1f5f9; color: #64748b; }
+.tag-im-test { background: #fef3c7; color: #a16207; }
+.tag-getestet { background: #dbeafe; color: #1e40af; }
+.tag-bewährt { background: #dcfce7; color: #166534; }
+.tag-familie-hit { background: #fef2f2; color: #dc2626; }
+.tag-experiment { background: #f3e8ff; color: #7c3aed; }
 
 .recipe-content {
     padding: 1.5rem;
