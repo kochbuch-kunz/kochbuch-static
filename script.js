@@ -404,8 +404,7 @@ function goBack() {
     window.location.href = '/';
 }
 
-// Tag Emojis
-s zentral laden
+// Tags zentral laden
 let tagsData = null;
 
 // Tag Emojis (jetzt zentral aus tags.json)
