@@ -255,6 +255,7 @@ async function loadRecipes() {
         filteredRecipes = [...allRecipes];
         renderRecipes();
         updateStats();
+        generateFilterChips();
     } catch (error) {
         console.error('Fehler beim Laden der Rezepte:', error);
         document.getElementById('recipeGrid').innerHTML = `
@@ -475,4 +476,36 @@ function openModal(recipeId) {
 function closeModal() {
     document.getElementById('recipeModal').style.display = 'none';
     document.body.style.overflow = 'auto'; // Scrollen wieder erlauben
+}
+
+// Dynamische Filter-Chips generieren (am Ende von script.js)
+function generateFilterChips() {
+    if (!tagsData) return; // Warten bis Tags geladen
+    
+    // Alle Tags aus allen Rezepten sammeln
+    const allTags = new Set();
+    allRecipes.forEach(recipe => {
+        recipe.tags.forEach(tag => allTags.add(tag));
+    });
+    
+    // Core-Tags zuerst, dann alphabetisch
+    const coreTags = tagsData.groups['basis-core'].tags;
+    const sortedTags = [
+        ...coreTags.filter(tag => allTags.has(tag)),
+        ...[...allTags].filter(tag => !coreTags.includes(tag)).sort()
+    ];
+    
+    // Filter-Container finden und ersetzen
+    const filterContainer = document.querySelector('.filter-chips');
+    filterContainer.innerHTML = `
+        <div class="filter-chip active" data-filter="all">⭐ Alle</div>
+        ${sortedTags.map(tag => 
+            `<div class="filter-chip" data-filter="${tag}">${getTagEmoji(tag)} ${tag}</div>`
+        ).join('')}
+    `;
+    
+    // Event Listeners für neue Chips
+    filterContainer.querySelectorAll('.filter-chip').forEach(chip => {
+        chip.addEventListener('click', handleFilter);
+    });
 }
