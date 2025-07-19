@@ -31,7 +31,9 @@ function generateSchemaLD(recipe) {
         "@context": "https://schema.org",
         "@type": "Recipe",
         "name": recipe.name,
-        "description": recipe.description,
+        "description": recipe.description + 
+          (recipe.variations ? `\n\nVariationen: ${recipe.variations}` : '') +
+          (recipe.hacksAndTips ? `\n\nTipps: ${recipe.hacksAndTips}` : ''),
         "prepTime": `PT${recipe.time}`,
         "recipeCategory": recipe.tags.includes('frühstück') ? 'Frühstück' : 
                         recipe.tags.includes('familie') ? 'Hauptgericht' : 'Beilage',
