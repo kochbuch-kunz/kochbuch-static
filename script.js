@@ -247,6 +247,7 @@ function setupEventListeners() {
 
 // Rezepte laden
 async function loadRecipes() {
+    await loadTags();
     try {
         const response = await fetch('recipes.json');
         const data = await response.json();
@@ -403,89 +404,22 @@ function goBack() {
 }
 
 // Tag Emojis
+s zentral laden
+let tagsData = null;
+
+// Tag Emojis (jetzt zentral aus tags.json)
 function getTagEmoji(tag) {
-    const emojis = {
-        // === 📦 BASIS-TAGS ===
-        // Core-Filter
-        'joker': '🃏',
-        'vorratskammer': '🏠', 
-        'schnell': '⚡',
-        'familie': '👨‍👩‍👧‍👦',
-        'comfort-food': '🫂',
-    
-        // Browse-Kategorien  
-        'hauptgericht': '🍽️',
-        'frühstück': '🥞',
-        'snacks': '🍪',
-        'beilagen': '🥗',
-        'dips': '🥄',
-        'saucen': '🍯',
-        'aufstriche': '🍞',
-        'backen': '🧁',
-        'suppen': '🍲',
-        'salate': '🥬',
-        'getränke': '🥤',
-        'desserts': '🍰',
-        'baukasten': '🔧',
-    
-        // === 🥗 ERNÄHRUNGS-STIL ===
-        'vegan': '🌱',
-        'vegetarisch': '🥛',
-        'low-carb': '⬇️',
-        'high-protein': '💪',
-        'ketogen': '🥥',
-    
-        // === 🧬 NÄHRSTOFFE ===
-        'beta-carotin': '🥕',
-        'eisen': '🩸',
-        'folsäure': '🍃',
-        'vitamin-k': '🥬',
-        'omega-3': '🐟',
-        'calcium': '🦴',
-        'vitamin-c': '🍊',
-        'magnesium': '⚡',
-        'zink': '💪',
-        'antioxidantien': '🛡️',
-        'gute-fette': '🥑',
-        'pflanzliche-eiweisse': '🌱',
-        'ballaststoffe': '🌾',
-        'rohkost-anteil': '🥗',
-    
-        // === 🍱 MEAL-PREP & ORGANISATION ===
-        'meal-prep': '🍱',
-        'tk-geeignet': '❄️',
-        'batch-cooking': '🥘',
-        'resteverwertung': '♻️',
-        'saisonal': '🌱',
-    
-        // === 🚫 OHNE-FILTER ===
-        'ohne-fisch': '🚫🐟',
-        'ohne-fleisch': '🚫🥩',
-        'ohne-milchprodukte': '🚫🥛',
-        'ohne-nüsse': '🚫🥜',
-        'ohne-gluten': '🚫🌾',
-        'ohne-soja': '🚫🫘',
-        'zuckerfrei': '🚫🍯',
-        'ohne-mehl': '🚫🌾',
-        
-        // === 🌍 KÜCHEN-STIL ===
-        'asiatisch': '🥢',
-        'italienisch': '🍝',
-        'mediterran': '🫒',
-        'orientalisch': '🕌',
-        'indisch': '🌶️',
-        'französisch': '🥐',
-        
-        // === ✅ TEST-STATUS ===
-        'ungetestet': '❓',
-        'im-test': '🧪',
-        'getestet': '✅',
-        'bewährt': '⭐',
-        'familie-hit': '👨‍👩‍👧‍👦',
-        'experiment': '🔬'
-    };
-    
-    return emojis[tag] || '🏷️';
+    return tagsData?.definitions[tag]?.emoji || '🏷️';
+}
+
+// Tags beim Laden der Rezepte mit laden
+async function loadTags() {
+    try {
+        const response = await fetch('tags.json');
+        tagsData = await response.json();
+    } catch (error) {
+        console.error('Fehler beim Laden der Tags:', error);
+    }
 }
 
 // Statistiken aktualisieren
