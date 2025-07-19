@@ -117,6 +117,13 @@ recipes.forEach(recipe => {
                     ${recipe.instructions.map(step => `<li>${step}</li>`).join('')}
                 </ol>
             </div>
+
+            ${recipe.variations ? `
+                <div class="variations">
+                    <div class="variations-title">🔄 Variationen & Alternativen</div>
+                    <div>${recipe.variations}</div>
+                </div>
+            ` : ''}
             
             ${recipe.hacksAndTips ? `
                 <div class="hacks-tips">
