@@ -17,7 +17,7 @@ const recipes = recipesData.recipes;
 const templateHtml = fs.readFileSync('./template.html', 'utf8');
 
 // Statische Dateien kopieren
-const staticFiles = ['style.css', 'script.js', 'admin.html', 'recipes.json', '_redirects'];
+const staticFiles = ['style.css', 'script.js', 'admin.html', 'recipes.json', 'tags.json', '_redirects'];
 staticFiles.forEach(file => {
     if (fs.existsSync(file)) {
         fs.copyFileSync(file, path.join(distDir, file));
