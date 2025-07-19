@@ -1,0 +1,119 @@
+{
+  "tagSystem": {
+    "version": "1.0",
+    "lastUpdated": "2025-07-18"
+  },
+  "groups": {
+    "basis-core": {
+      "name": "Basis (Core)",
+      "priority": 1,
+      "tags": ["joker", "vorratskammer", "schnell", "familie", "comfort-food"]
+    },
+    "basis-browse": {
+      "name": "Browse-Kategorien", 
+      "priority": 2,
+      "tags": ["hauptgericht", "frühstück", "snacks", "beilagen", "dips", "saucen", "aufstriche", "backen", "suppen", "salate", "getränke", "desserts", "baukasten"]
+    },
+    "ernährung": {
+      "name": "Ernährungs-Stil",
+      "priority": 3,
+      "tags": ["vegan", "vegetarisch", "low-carb", "high-protein", "ketogen"]
+    },
+    "nährstoffe": {
+      "name": "Nährstoffe",
+      "priority": 4,
+      "tags": ["beta-carotin", "eisen", "folsäure", "vitamin-k", "omega-3", "calcium", "vitamin-c", "magnesium", "zink", "antioxidantien", "gute-fette", "pflanzliche-eiweisse", "ballaststoffe", "rohkost-anteil"]
+    },
+    "meal-prep": {
+      "name": "Meal-Prep & Organisation",
+      "priority": 5, 
+      "tags": ["meal-prep", "tk-geeignet", "batch-cooking", "resteverwertung", "saisonal"]
+    },
+    "ohne": {
+      "name": "OHNE-Filter",
+      "priority": 6,
+      "tags": ["ohne-fisch", "ohne-fleisch", "ohne-milchprodukte", "ohne-nüsse", "ohne-gluten", "ohne-soja", "zuckerfrei", "ohne-mehl"]
+    },
+    "küche": {
+      "name": "Küchen-Stil", 
+      "priority": 7,
+      "tags": ["asiatisch", "italienisch", "mediterran", "orientalisch", "indisch", "französisch"]
+    },
+    "test": {
+      "name": "Test-Status",
+      "priority": 8,
+      "tags": ["ungetestet", "im-test", "getestet", "bewährt", "familie-hit", "experiment"]
+    }
+  },
+  "definitions": {
+    "joker": { "emoji": "🃏", "color": "#fbbf24" },
+    "vorratskammer": { "emoji": "🏠", "color": "#10b981" },
+    "schnell": { "emoji": "⚡", "color": "#ef4444" },
+    "familie": { "emoji": "👨‍👩‍👧‍👦", "color": "#8b5cf6" },
+    "comfort-food": { "emoji": "🫂", "color": "#f87171" },
+    
+    "hauptgericht": { "emoji": "🍽️", "color": "#dbeafe" },
+    "frühstück": { "emoji": "🥞", "color": "#fef3c7" },
+    "snacks": { "emoji": "🍪", "color": "#fef3c7" },
+    "beilagen": { "emoji": "🥗", "color": "#dcfce7" },
+    "dips": { "emoji": "🥄", "color": "#fce7f3" },
+    "saucen": { "emoji": "🍯", "color": "#f3e8ff" },
+    "aufstriche": { "emoji": "🍞", "color": "#fed7d7" },
+    "backen": { "emoji": "🧁", "color": "#fff7ed" },
+    "suppen": { "emoji": "🍲", "color": "#ecfdf5" },
+    "salate": { "emoji": "🥬", "color": "#f0fdf4" },
+    "getränke": { "emoji": "🥤", "color": "#dbeafe" },
+    "desserts": { "emoji": "🍰", "color": "#fdf2f8" },
+    "baukasten": { "emoji": "🔧", "color": "#f1f5f9" },
+    
+    "vegan": { "emoji": "🌱", "color": "#22c55e" },
+    "vegetarisch": { "emoji": "🥛", "color": "#84cc16" },
+    "low-carb": { "emoji": "⬇️", "color": "#f0fdf4" },
+    "high-protein": { "emoji": "💪", "color": "#dcfce7" },
+    "ketogen": { "emoji": "🥥", "color": "#365314" },
+    
+    "beta-carotin": { "emoji": "🥕", "color": "#fff7ed" },
+    "eisen": { "emoji": "🩸", "color": "#fef3c7" },
+    "folsäure": { "emoji": "🍃", "color": "#fefce8" },
+    "vitamin-k": { "emoji": "🥬", "color": "#ecfdf5" },
+    "omega-3": { "emoji": "🐟", "color": "#dbeafe" },
+    "calcium": { "emoji": "🦴", "color": "#f8fafc" },
+    "vitamin-c": { "emoji": "🍊", "color": "#fff7ed" },
+    "magnesium": { "emoji": "⚡", "color": "#fef3c7" },
+    "zink": { "emoji": "💪", "color": "#fefce8" },
+    "antioxidantien": { "emoji": "🛡️", "color": "#f3e8ff" },
+    "gute-fette": { "emoji": "🥑", "color": "#f0fdf4" },
+    "pflanzliche-eiweisse": { "emoji": "🌱", "color": "#dcfce7" },
+    "ballaststoffe": { "emoji": "🌾", "color": "#fefce8" },
+    "rohkost-anteil": { "emoji": "🥗", "color": "#ecfdf5" },
+    
+    "meal-prep": { "emoji": "🍱", "color": "#3b82f6" },
+    "tk-geeignet": { "emoji": "❄️", "color": "#dbeafe" },
+    "batch-cooking": { "emoji": "🥘", "color": "#e0e7ff" },
+    "resteverwertung": { "emoji": "♻️", "color": "#f0f9ff" },
+    "saisonal": { "emoji": "🌱", "color": "#dcfce7" },
+    
+    "ohne-fisch": { "emoji": "🚫🐟", "color": "#f0f9ff" },
+    "ohne-fleisch": { "emoji": "🚫🥩", "color": "#f0fdf4" },
+    "ohne-milchprodukte": { "emoji": "🚫🥛", "color": "#fffbeb" },
+    "ohne-nüsse": { "emoji": "🚫🥜", "color": "#fef2f2" },
+    "ohne-gluten": { "emoji": "🚫🌾", "color": "#f3e8ff" },
+    "ohne-soja": { "emoji": "🚫🫘", "color": "#ecfdf5" },
+    "zuckerfrei": { "emoji": "🚫🍯", "color": "#fdf2f8" },
+    "ohne-mehl": { "emoji": "🚫🌾", "color": "#f0f9ff" },
+    
+    "asiatisch": { "emoji": "🥢", "color": "#fef3c7" },
+    "italienisch": { "emoji": "🍝", "color": "#dcfce7" },
+    "mediterran": { "emoji": "🫒", "color": "#dbeafe" },
+    "orientalisch": { "emoji": "🕌", "color": "#fde68a" },
+    "indisch": { "emoji": "🌶️", "color": "#fed7d7" },
+    "französisch": { "emoji": "🥐", "color": "#e0e7ff" },
+    
+    "ungetestet": { "emoji": "❓", "color": "#f1f5f9" },
+    "im-test": { "emoji": "🧪", "color": "#fef3c7" },
+    "getestet": { "emoji": "✅", "color": "#dbeafe" },
+    "bewährt": { "emoji": "⭐", "color": "#dcfce7" },
+    "familie-hit": { "emoji": "👨‍👩‍👧‍👦", "color": "#fef2f2" },
+    "experiment": { "emoji": "🔬", "color": "#f3e8ff" }
+  }
+}
