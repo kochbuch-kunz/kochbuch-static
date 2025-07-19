@@ -405,17 +405,87 @@ function goBack() {
 // Tag Emojis
 function getTagEmoji(tag) {
     const emojis = {
-        vegan: '🌱',
-        vegetarisch: '🥛',
-        joker: '🃏',
-        vorratskammer: '🏠',
-        protein: '💪',
-        schnell: '⚡',
-        familie: '👨‍👩‍👧‍👦',
+        // === 📦 BASIS-TAGS ===
+        // Core-Filter
+        'joker': '🃏',
+        'vorratskammer': '🏠', 
+        'schnell': '⚡',
+        'familie': '👨‍👩‍👧‍👦',
+        'comfort-food': '🫂',
+    
+        // Browse-Kategorien  
+        'hauptgericht': '🍽️',
+        'frühstück': '🥞',
+        'snacks': '🍪',
+        'beilagen': '🥗',
+        'dips': '🥄',
+        'saucen': '🍯',
+        'aufstriche': '🍞',
+        'backen': '🧁',
+        'suppen': '🍲',
+        'salate': '🥬',
+        'getränke': '🥤',
+        'desserts': '🍰',
+        'baukasten': '🔧',
+    
+        // === 🥗 ERNÄHRUNGS-STIL ===
+        'vegan': '🌱',
+        'vegetarisch': '🥛',
+        'low-carb': '⬇️',
+        'high-protein': '💪',
+        'ketogen': '🥥',
+    
+        // === 🧬 NÄHRSTOFFE ===
+        'beta-carotin': '🥕',
+        'eisen': '🩸',
+        'folsäure': '🍃',
+        'vitamin-k': '🥬',
+        'omega-3': '🐟',
+        'calcium': '🦴',
+        'vitamin-c': '🍊',
+        'magnesium': '⚡',
+        'zink': '💪',
+        'antioxidantien': '🛡️',
+        'gute-fette': '🥑',
+        'pflanzliche-eiweisse': '🌱',
+        'ballaststoffe': '🌾',
+        'rohkost-anteil': '🥗',
+    
+        // === 🍱 MEAL-PREP & ORGANISATION ===
         'meal-prep': '🍱',
-        frühstück: '🥞'
+        'tk-geeignet': '❄️',
+        'batch-cooking': '🥘',
+        'resteverwertung': '♻️',
+        'saisonal': '🌱',
+    
+        // === 🚫 OHNE-FILTER ===
+        'ohne-fisch': '🚫🐟',
+        'ohne-fleisch': '🚫🥩',
+        'ohne-milchprodukte': '🚫🥛',
+        'ohne-nüsse': '🚫🥜',
+        'ohne-gluten': '🚫🌾',
+        'ohne-soja': '🚫🫘',
+        'zuckerfrei': '🚫🍯',
+        'ohne-mehl': '🚫🌾',
+        
+        // === 🌍 KÜCHEN-STIL ===
+        'asiatisch': '🥢',
+        'italienisch': '🍝',
+        'mediterran': '🫒',
+        'orientalisch': '🕌',
+        'indisch': '🌶️',
+        'französisch': '🥐',
+        
+        // === ✅ TEST-STATUS ===
+        'ungetestet': '❓',
+        'im-test': '🧪',
+        'getestet': '✅',
+        'bewährt': '⭐',
+        'familie-hit': '👨‍👩‍👧‍👦',
+        'experiment': '🔬'
     };
-    return emojis[tag] || '';
+    
+    return emojis[tag] || '🏷️';
 }
 
 // Statistiken aktualisieren
