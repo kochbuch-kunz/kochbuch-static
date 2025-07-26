@@ -1,7 +1,9 @@
 {
   "tagSystem": {
-    "version": "1.0",
-    "lastUpdated": "2025-07-18"
+    "version": "2.0",
+    "lastUpdated": "2025-07-26",
+    "totalTags": 72,
+    "totalGroups": 8
   },
   "groups": {
     "basis-core": {
@@ -14,34 +16,39 @@
       "priority": 2,
       "tags": ["hauptgericht", "frühstück", "snacks", "beilagen", "dips", "saucen", "aufstriche", "backen", "suppen", "salate", "getränke", "desserts", "baukasten"]
     },
+    "haupt-zutaten": {
+      "name": "Haupt-Zutaten",
+      "priority": 3,
+      "tags": ["nudeln/pasta", "reis", "kartoffeln", "hülsenfrüchte", "gemüse", "fisch", "fleisch", "eier", "käse"]
+    },
     "ernährung": {
       "name": "Ernährungs-Stil",
-      "priority": 3,
+      "priority": 4,
       "tags": ["vegan", "vegetarisch", "low-carb", "high-protein", "ketogen"]
     },
     "nährstoffe": {
       "name": "Nährstoffe",
-      "priority": 4,
-      "tags": ["beta-carotin", "eisen", "folsäure", "vitamin-k", "omega-3", "calcium", "vitamin-c", "magnesium", "zink", "antioxidantien", "gute-fette", "pflanzliche-eiweisse", "ballaststoffe", "rohkost-anteil"]
+      "priority": 5,
+      "tags": ["beta-carotin", "eisen", "folsäure", "vitamin-k", "omega-3", "calcium", "vitamin-c", "magnesium", "zink", "antioxidantien", "gute-fette", "pflanzliche-eiweisse", "ballaststoffe", "rohkost-anteil", "kreuzblütler"]
     },
     "meal-prep": {
       "name": "Meal-Prep & Organisation",
-      "priority": 5, 
+      "priority": 6, 
       "tags": ["meal-prep", "tk-geeignet", "batch-cooking", "resteverwertung", "saisonal"]
     },
     "ohne": {
       "name": "OHNE-Filter",
-      "priority": 6,
+      "priority": 7,
       "tags": ["ohne-fisch", "ohne-fleisch", "ohne-milchprodukte", "ohne-nüsse", "ohne-gluten", "ohne-soja", "zuckerfrei", "ohne-mehl"]
     },
     "küche": {
       "name": "Küchen-Stil", 
-      "priority": 7,
+      "priority": 8,
       "tags": ["asiatisch", "italienisch", "mediterran", "orientalisch", "indisch", "französisch"]
     },
     "test": {
       "name": "Test-Status",
-      "priority": 8,
+      "priority": 9,
       "tags": ["ungetestet", "im-test", "getestet", "bewährt", "familie-hit", "experiment"]
     }
   },
@@ -66,6 +73,16 @@
     "desserts": { "emoji": "🍰", "color": "#fdf2f8" },
     "baukasten": { "emoji": "🔧", "color": "#f1f5f9" },
     
+    "nudeln/pasta": { "emoji": "🍝", "color": "#fef3c7" },
+    "reis": { "emoji": "🍚", "color": "#fef3c7" },
+    "kartoffeln": { "emoji": "🥔", "color": "#fef3c7" },
+    "hülsenfrüchte": { "emoji": "🫘", "color": "#fef3c7" },
+    "gemüse": { "emoji": "🥬", "color": "#fef3c7" },
+    "fisch": { "emoji": "🐟", "color": "#fef3c7" },
+    "fleisch": { "emoji": "🥩", "color": "#fef3c7" },
+    "eier": { "emoji": "🥚", "color": "#fef3c7" },
+    "käse": { "emoji": "🧀", "color": "#fef3c7" },
+    
     "vegan": { "emoji": "🌱", "color": "#22c55e" },
     "vegetarisch": { "emoji": "🥛", "color": "#84cc16" },
     "low-carb": { "emoji": "⬇️", "color": "#f0fdf4" },
@@ -86,6 +103,7 @@
     "pflanzliche-eiweisse": { "emoji": "🌱", "color": "#dcfce7" },
     "ballaststoffe": { "emoji": "🌾", "color": "#fefce8" },
     "rohkost-anteil": { "emoji": "🥗", "color": "#ecfdf5" },
+    "kreuzblütler": { "emoji": "🥦", "color": "#ecfdf5" },
     
     "meal-prep": { "emoji": "🍱", "color": "#3b82f6" },
     "tk-geeignet": { "emoji": "❄️", "color": "#dbeafe" },
