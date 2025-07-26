@@ -155,18 +155,74 @@
                     <textarea id="recipeDescription" required placeholder="Kurze Beschreibung des Rezepts..."></textarea>
                 </div>
                 
-                <div class="form-group">
+               <div class="form-group">
                     <label>Tags auswählen</label>
+                    
+                    <!-- BASIS-TAGS (immer sichtbar) -->
+                    <h4 style="margin: 1rem 0 0.5rem 0; color: #333; font-size: 0.9rem;">📦 Basis-Tags</h4>
+                    <div class="tag-selector">
+                        <div class="tag-option" data-tag="joker">🃏 joker</div>
+                        <div class="tag-option" data-tag="vorratskammer">🏠 vorratskammer</div>
+                        <div class="tag-option" data-tag="schnell">⚡ schnell</div>
+                        <div class="tag-option" data-tag="familie">👨‍👩‍👧‍👦 familie</div>
+                        <div class="tag-option" data-tag="comfort-food">🫂 comfort-food</div>
+                    </div>
+                    
+                    <h4 style="margin: 1rem 0 0.5rem 0; color: #333; font-size: 0.9rem;">🍽️ Browse-Kategorien</h4>
+                    <div class="tag-selector">
+                        <div class="tag-option" data-tag="hauptgericht">🍽️ hauptgericht</div>
+                        <div class="tag-option" data-tag="frühstück">🥞 frühstück</div>
+                        <div class="tag-option" data-tag="snacks">🍪 snacks</div>
+                        <div class="tag-option" data-tag="beilagen">🥗 beilagen</div>
+                        <div class="tag-option" data-tag="dips">🥄 dips</div>
+                        <div class="tag-option" data-tag="aufstriche">🍞 aufstriche</div>
+                        <div class="tag-option" data-tag="backen">🧁 backen</div>
+                    </div>
+                    
+                    <!-- HAUPT-ZUTATEN (NEU!) -->
+                    <h4 style="margin: 1rem 0 0.5rem 0; color: #333; font-size: 0.9rem;">🥘 Haupt-Zutaten</h4>
+                    <div class="tag-selector">
+                        <div class="tag-option" data-tag="nudeln/pasta">🍝 nudeln/pasta</div>
+                        <div class="tag-option" data-tag="reis">🍚 reis</div>
+                        <div class="tag-option" data-tag="kartoffeln">🥔 kartoffeln</div>
+                        <div class="tag-option" data-tag="hülsenfrüchte">🫘 hülsenfrüchte</div>
+                        <div class="tag-option" data-tag="gemüse">🥬 gemüse</div>
+                        <div class="tag-option" data-tag="käse">🧀 käse</div>
+                    </div>
+                    
+                    <!-- ERNÄHRUNGS-STIL -->
+                    <h4 style="margin: 1rem 0 0.5rem 0; color: #333; font-size: 0.9rem;">🥗 Ernährungs-Stil</h4>
                     <div class="tag-selector">
                         <div class="tag-option" data-tag="vegan">🌱 vegan</div>
                         <div class="tag-option" data-tag="vegetarisch">🥛 vegetarisch</div>
-                        <div class="tag-option" data-tag="joker">🃏 joker</div>
-                        <div class="tag-option" data-tag="vorratskammer">🏠 vorratskammer</div>
-                        <div class="tag-option" data-tag="protein">💪 protein</div>
-                        <div class="tag-option" data-tag="schnell">⚡ schnell</div>
-                        <div class="tag-option" data-tag="familie">👨‍👩‍👧‍👦 familie</div>
+                        <div class="tag-option" data-tag="high-protein">💪 high-protein</div>
+                    </div>
+                    
+                    <!-- WICHTIGE NÄHRSTOFFE -->
+                    <h4 style="margin: 1rem 0 0.5rem 0; color: #333; font-size: 0.9rem;">🧬 Wichtige Nährstoffe</h4>
+                    <div class="tag-selector">
+                        <div class="tag-option" data-tag="omega-3">🐟 omega-3</div>
+                        <div class="tag-option" data-tag="calcium">🦴 calcium</div>
+                        <div class="tag-option" data-tag="kreuzblütler">🥦 kreuzblütler</div>
+                        <div class="tag-option" data-tag="gute-fette">🥑 gute-fette</div>
+                        <div class="tag-option" data-tag="pflanzliche-eiweisse">🌱 pflanzliche-eiweisse</div>
+                    </div>
+                    
+                    <!-- MEAL-PREP -->
+                    <h4 style="margin: 1rem 0 0.5rem 0; color: #333; font-size: 0.9rem;">🍱 Meal-Prep</h4>
+                    <div class="tag-selector">
                         <div class="tag-option" data-tag="meal-prep">🍱 meal-prep</div>
-                        <div class="tag-option" data-tag="frühstück">🥞 frühstück</div>
+                        <div class="tag-option" data-tag="batch-cooking">🥘 batch-cooking</div>
+                        <div class="tag-option" data-tag="tk-geeignet">❄️ tk-geeignet</div>
+                    </div>
+                    
+                    <!-- TEST-STATUS -->
+                    <h4 style="margin: 1rem 0 0.5rem 0; color: #333; font-size: 0.9rem;">✅ Test-Status</h4>
+                    <div class="tag-selector">
+                        <div class="tag-option" data-tag="ungetestet">❓ ungetestet</div>
+                        <div class="tag-option" data-tag="getestet">✅ getestet</div>
+                        <div class="tag-option" data-tag="bewährt">⭐ bewährt</div>
+                        <div class="tag-option" data-tag="familie-hit">👨‍👩‍👧‍👦 familie-hit</div>
                     </div>
                 </div>
                 
