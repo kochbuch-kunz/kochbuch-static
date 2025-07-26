@@ -469,6 +469,8 @@
                 },
                 ingredients,
                 instructions,
+                variations: document.getElementById('recipeVariations').value.trim(),
+                hacksAndTips: document.getElementById('recipeHacks').value.trim(),
                 familyNotes: document.getElementById('familyNotes').value.trim()
             };
         }
@@ -497,6 +499,8 @@
             document.getElementById('recipeProtein').value = recipe.nutrition.protein;
             document.getElementById('recipeCarbs').value = recipe.nutrition.carbs;
             document.getElementById('recipeFat').value = recipe.nutrition.fat;
+            document.getElementById('recipeVariations').value = recipe.variations || '';
+            document.getElementById('recipeHacks').value = recipe.hacksAndTips || '';
             document.getElementById('familyNotes').value = recipe.familyNotes || '';
 
             // Tags auswählen
