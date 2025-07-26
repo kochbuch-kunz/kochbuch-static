@@ -216,7 +216,7 @@ h1 {
 }
 
 /* ========================================
-   TAG-SYSTEM KOMPLETT (62 Tags in 7 Gruppen)
+   TAG-SYSTEM V2 KOMPLETT (72 Tags in 8 Gruppen)
    ======================================== */
 
 /* === 📦 BASIS-TAGS (Core + Browse-Kategorien) === */
@@ -228,7 +228,7 @@ h1 {
 .tag-familie { background: #8b5cf6; color: white; }
 .tag-comfort-food { background: #f87171; color: white; }
 
-/* Browse-Kategorien (NEU) */
+/* Browse-Kategorien */
 .tag-hauptgericht { background: #dbeafe; color: #1e40af; }
 .tag-frühstück { background: #fef3c7; color: #d97706; }
 .tag-snacks { background: #fef3c7; color: #d97706; }
@@ -243,11 +243,22 @@ h1 {
 .tag-desserts { background: #fdf2f8; color: #be185d; }
 .tag-baukasten { background: #f1f5f9; color: #475569; }
 
+/* === 🥘 HAUPT-ZUTATEN (Gelb/Orange-Töne) === */
+.tag-nudeln\/pasta { background: #fef3c7; color: #d97706; font-weight: 600; }
+.tag-reis { background: #fef3c7; color: #d97706; font-weight: 600; }
+.tag-kartoffeln { background: #fef3c7; color: #d97706; font-weight: 600; }
+.tag-hülsenfrüchte { background: #fef3c7; color: #d97706; font-weight: 600; }
+.tag-gemüse { background: #fef3c7; color: #d97706; font-weight: 600; }
+.tag-fisch { background: #fef3c7; color: #d97706; font-weight: 600; }
+.tag-fleisch { background: #fef3c7; color: #d97706; font-weight: 600; }
+.tag-eier { background: #fef3c7; color: #d97706; font-weight: 600; }
+.tag-käse { background: #fef3c7; color: #d97706; font-weight: 600; }
+
 /* === 🥗 ERNÄHRUNGS-STIL (Grün-Töne) === */
-.tag-vegan { background: #22c55e; color: white; } /* bestehend */
-.tag-vegetarisch { background: #84cc16; color: white; } /* bestehend */
+.tag-vegan { background: #22c55e; color: white; }
+.tag-vegetarisch { background: #84cc16; color: white; }
 .tag-low-carb { background: #f0fdf4; color: #166534; }
-.tag-high-protein { background: #dcfce7; color: #15803d; } /* ersetzt "protein" */
+.tag-high-protein { background: #dcfce7; color: #15803d; }
 .tag-ketogen { background: #365314; color: #ecfdf5; }
 
 /* === 🧬 NÄHRSTOFFE (Orange/Gelb-Töne) === */
@@ -265,9 +276,10 @@ h1 {
 .tag-pflanzliche-eiweisse { background: #dcfce7; color: #15803d; }
 .tag-ballaststoffe { background: #fefce8; color: #a16207; }
 .tag-rohkost-anteil { background: #ecfdf5; color: #047857; }
+.tag-kreuzblütler { background: #ecfdf5; color: #047857; }
 
 /* === 🍱 MEAL-PREP & ORGANISATION (Blau-Töne) === */
-.tag-meal-prep { background: #3b82f6; color: white; } /* bestehend */
+.tag-meal-prep { background: #3b82f6; color: white; }
 .tag-tk-geeignet { background: #dbeafe; color: #1e40af; }
 .tag-batch-cooking { background: #e0e7ff; color: #3730a3; }
 .tag-resteverwertung { background: #f0f9ff; color: #0369a1; }
