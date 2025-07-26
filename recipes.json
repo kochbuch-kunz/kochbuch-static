@@ -101,6 +101,171 @@
         "Mit Salz und Pfeffer abschmecken. Am nächsten Tag schmeckt es noch besser!"
       ],
       "hacksAndTips": "💡 Schwarze Bohnen kannn man auch durch eine zweite Dose Kidneybohnen ersetzen. Frische Paprika kommt auch gut, aber dann ist es natürlich nicht mehr komplett aus Vorrat."
+    },
+    {
+      "id": "sesamnudeln",
+      "name": "Sesamnudeln",
+      "time": "8min",
+      "recipeYield": "4 Portionen",
+      "description": "Asia-Fusion für die Familie - bewährter Familie-Hit aus dem Experiment!",
+      "tags": [
+        "bewährt",
+        "hauptgericht", 
+        "vegan",
+        "ohne-milchprodukte",
+        "familie",
+        "meal-prep",
+        "schnell",
+        "asiatisch",
+        "calcium",
+        "gute-fette",
+        "batch-cooking",
+        "kreuzblütler",
+        "nudeln/pasta"
+      ],
+      "nutrition": {
+        "kcal": 385,
+        "protein": "12g",
+        "carbs": "65g",
+        "fat": "10g"
+      },
+      "ingredients": [
+        {
+          "name": "Mie-Nudeln",
+          "amount": "250g",
+          "note": "Vollkorn verfügbar"
+        },
+        {
+          "name": "Sesamsamen",
+          "amount": "3 EL",
+          "note": "geröstet"
+        },
+        {
+          "name": "Sesamöl",
+          "amount": "3 EL"
+        },
+        {
+          "name": "Sojasauce",
+          "amount": "2 EL"
+        },
+        {
+          "name": "Honig",
+          "amount": "1 EL",
+          "note": "oder Ahornsirup"
+        },
+        {
+          "name": "Reisessig",
+          "amount": "1 TL",
+          "note": "oder Citrovin"
+        },
+        {
+          "name": "Möhren",
+          "amount": "2 Stück",
+          "note": "in Scheiben geschnitten"
+        },
+        {
+          "name": "Mungobohnenkeimlinge",
+          "amount": "100g"
+        },
+        {
+          "name": "Erbsen",
+          "amount": "100g",
+          "note": "TK oder frisch"
+        },
+        {
+          "name": "Brokkoli",
+          "amount": "200g",
+          "note": "in Röschen"
+        },
+        {
+          "name": "Frühlingszwiebeln",
+          "amount": "2 Stück",
+          "note": "optional"
+        }
+      ],
+      "instructions": [
+        "Sauce vorbereiten: Sesamöl, Sojasauce, Honig und Essig in einer Schüssel vermischen.",
+        "Mie-Nudeln nach Packungsanweisung 3 Minuten kochen, abgießen.",
+        "Gemüse (Möhren, Mungobohnenkeimlinge, Erbsen, Brokkoli, optional Frühlingszwiebeln) in großer Pfanne anbraten bis bissfest.",
+        "Heiße Nudeln direkt in die Pfanne mit dem Gemüse geben.",
+        "Sesam-Sauce unterrühren und alles gut vermischen.",
+        "Mit gerösteten Sesamsamen bestreuen und sofort servieren."
+      ],
+      "variations": "🌶️ Mit Erdnusssoße: Perfekt mit [Basis-Erdnuss-Soße] - passt auch ohne Hähnchen! 🥛 Mit Hähnchen: +Hähnchenfleisch angebraten, dazu Erdnusssoße. 🌾 Vollkorn-Option: Vollkorn-Mie-Nudeln verwenden (gleiche Kochzeit).",
+      "hacksAndTips": "🍱 Batch-Cooking: Brokkoli und Möhren vorab dünsten (mögen wir nicht so fest). ⏰ Timing-Hack: Mit vorbereitetem Gemüse nur 8 Min total (3 Min Nudeln + 5 Min mischen). 🛒 Einkaufs-Tipp: Geröstete Sesamsamen kaufen spart Zeit. 🍱 Meal-Prep: Perfekt für nächsten Tag mitnehmen. 🥗 Gemüse-Alternative: Funktioniert auch mit TK-Asia-Gemüse statt frischer Gemüse-Auswahl. 🥜 Frühlingszwiebeln: Können sowohl mitgebraten als auch als Topping verwendet werden."
+    },
+    {
+      "id": "mango-haferflocken-kekse",
+      "name": "Mango-Haferflocken-Kekse",
+      "time": "12min",
+      "recipeYield": "20 Kekse",
+      "description": "👧 Tochter-Favorit für die Kita! Natürlich gesüßt und perfekt für kleine Hände.",
+      "tags": [
+        "bewährt",
+        "familie-hit", 
+        "frühstück",
+        "vegan",
+        "ohne-milchprodukte",
+        "meal-prep",
+        "backen",
+        "snacks",
+        "schnell",
+        "familie",
+        "zuckerfrei",
+        "beta-carotin",
+        "ballaststoffe",
+        "ohne-fleisch",
+        "ohne-fisch"
+      ],
+      "nutrition": {
+        "kcal": 72,
+        "protein": "2g",
+        "carbs": "12g",
+        "fat": "2g"
+      },
+      "ingredients": [
+        {
+          "name": "Mango",
+          "amount": "180g",
+          "note": "püriert"
+        },
+        {
+          "name": "Apfelmus",
+          "amount": "180g",
+          "note": "ungesüßt"
+        },
+        {
+          "name": "Haferflocken",
+          "amount": "150g"
+        },
+        {
+          "name": "Vollkornmehl",
+          "amount": "100g"
+        },
+        {
+          "name": "Backpulver",
+          "amount": "1 TL"
+        },
+        {
+          "name": "Kokosöl",
+          "amount": "2 EL"
+        },
+        {
+          "name": "Honig",
+          "amount": "2 EL"
+        }
+      ],
+      "instructions": [
+        "Backofen auf 175°C (Ober-/Unterhitze) vorheizen und Backblech mit Backpapier auslegen.",
+        "Mango pürieren und mit Apfelmus, Kokosöl und Honig in einer Schüssel gut verrühren.",
+        "Haferflocken und Vollkornmehl hinzufügen, zum Schluss das Backpulver unterrühren.",
+        "💡 Teig 5 Min quellen lassen - die Haferflocken nehmen Feuchtigkeit auf und lassen sich besser formen.",
+        "Mit Esslöffel kleine Häufchen abstechen oder zu fingerlangen Stangen formen (nasse Hände verhindern Kleben!). Auf das Backblech setzen.",
+        "8 Min backen, dann vorsichtig wenden und weitere 4 Min backen bis goldbraun.",
+        "⚠️ Auf einem Kuchengitter auskühlen lassen - so bleiben sie knusprig!"
+      ],
+      "variations": "🧁 Muffins: Teig in Muffinförmchen füllen, 18 Min backen. 🥥 Mit Kokosflocken: +2 EL Kokosflocken unterrühren. 🥜 Upgrade: +2 EL geröstete Mandeln gehackt. 📦 Shortcut: 360g Apfel-Mango-Mark aus dem Glas statt Mango + Apfelmus.",
+      "hacksAndTips": "🍱 Stangen-Form: Weniger Krümel, perfekt für Kinderhände zum Abbeißen. ⏰ Timing-Hack: 5 Min Quellzeit = bessere Formbarkeit und gerösteter Haferflocken-Geschmack. 👧 Kita-Power: Transportieren super in der Brotbox, 5 Tage in luftdichter Dose haltbar. 🔥 Profi-Tipp: Das Wenden nach 8 Min sorgt für gleichmäßige Bräunung und Extra-Knusprigkeit durch das brutzelnde Kokosöl."
     }
   ]
 }
