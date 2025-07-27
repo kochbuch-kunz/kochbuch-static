@@ -34,39 +34,83 @@
     },
     {
       "id": "hummus",
-      "name": "Hummus (selbstgemacht)",
+      "name": "Hummus",
       "time": "10min",
-      "tags": ["vegan", "joker", "vorratskammer", "protein", "schnell", "aufstriche"],
-      "recipeYield": "4 Portionen",
-      "description": "🃏 JOKER - Protein-Dip & vielseitige Basis! Multi-Verwendung: Dip, Brotaufstrich, Sauce, leichte Mahlzeit.",
+      "recipeYield": "4 Portionen", 
+      "description": "🃏 JOKER - Vielseitiger Protein-Dip & Brotaufstrich!",
+      "tags": [
+        "joker", 
+        "vorratskammer", 
+        "schnell", 
+        "familie", 
+        "dips", 
+        "aufstriche", 
+        "snacks",
+        "hülsenfrüchte",
+        "vegan",
+        "pflanzliche-eiweisse",
+        "folsäure",
+        "magnesium",
+        "meal-prep",
+        "ohne-milchprodukte",
+        "zuckerfrei",
+        "orientalisch",
+        "bewährt"
+      ],
       "nutrition": {
         "kcal": 185,
-        "protein": "8g",
-        "carbs": "18g",
-        "fat": "10g"
+        "protein": "5g",
+        "carbs": "12g", 
+        "fat": "12g"
       },
       "ingredients": [
-        { "name": "Kichererbsen", "amount": "1 Dose (400g)" },
-        { "name": "Tahin (Sesammus)", "amount": "3 EL" },
-        { "name": "Citrovin (Zitronensaft)", "amount": "2 EL" },
-        { "name": "Olivenöl", "amount": "3 EL" },
-        { "name": "Knoblauchzehe", "amount": "1 große" },
-        { "name": "Kreuzkümmel", "amount": "½ TL" },
-        { "name": "Salz", "amount": "½ TL" },
-        { "name": "Paprikapulver", "amount": "zum Garnieren" }
+        {
+          "name": "Kichererbsen",
+          "amount": "265g",
+          "note": "abgetropft (1 Dose 425g)"
+        },
+        {
+          "name": "Tahini",
+          "amount": "1,5 EL"
+        },
+        {
+          "name": "Citrovin",
+          "amount": "1,5 EL"
+        },
+        {
+          "name": "Olivenöl",
+          "amount": "2-3 EL"
+        },
+        {
+          "name": "Knoblauchzehe",
+          "amount": "1 kleine",
+          "note": "oder 1/2 große"
+        },
+        {
+          "name": "Paprikapulver (edelsüß)",
+          "amount": "1/2-1 TL"
+        },
+        {
+          "name": "Kreuzkümmel",
+          "amount": "1/2 TL"
+        },
+        {
+          "name": "Salz",
+          "amount": "1/2 TL",
+          "note": "zum Abschmecken"
+        }
       ],
       "instructions": [
-        "💡 Tipp: Dose Kichererbsen 15-20 Min in Tiefkühlschrank stellen (macht cremiger als Eiswürfel-Trick)",
-        "Kichererbsen abtropfen, aber Aquafaba (Dosenwasser) aufheben!",
-        "Knoblauch schälen und grob hacken", 
-        "Alle Zutaten in Mixer oder Küchenmaschine geben",
-        "Zu cremiger Paste pürieren - das dauert 2-3 Min",
-        "Falls zu dick: Aquafaba oder Wasser löffelweise hinzufügen",
-        "Abschmecken: mehr Zitrone für Frische, mehr Salz für Intensität, Paprikapulver dazu",
-        "In Schüssel geben und mit Olivenöl beträufeln"
+        "💡 Tipp: Kichererbsendose 20 Min vor Beginn in den Kühlschrank - spart Eiswürfel!",
+        "Kichererbsen abtropfen und gut abspülen.",
+        "Alle Zutaten in Mixer oder Küchenmaschine geben.",
+        "Zu cremiger Paste pürieren bis gewünschte Konsistenz erreicht.",
+        "Bei Bedarf etwas Wasser oder Olivenöl für cremigere Konsistenz hinzufügen.",
+        "Mit Salz, Paprikapulver und Kreuzkümmel abschmecken.",
+        "Optional: Mit zusätzlichem Paprikapulver (edelsüß) garnieren."
       ],
-      "variations": "🌱 Vegan: Wie original. 🌶️ Scharf: +1 TL Harissa. 🥕 Als Dip: Mit Gemüsesticks servieren.",
-      "hacksAndTips": "🥕 Perfekt mit Gemüsesticks, gerösteten Möhren oder als Brotaufstrich. Hält 1 Woche im Kühlschrank!"
+      "variations": "🌶️ Scharf: +1 TL Harissa oder Cayenne. 🥑 Cremig: +1/2 Avocado (experimentell). 🍝 Als Pasta-Sauce: Mit Nudelwasser verdünnen. 🥗 Als Salat-Dressing: Mit Zitronensaft verdünnt. 🌯 Perfect in Wraps als Basis. 📁 Kombiniert super mit [Geröstete Möhren] oder [Ofengemüse].",
+      "hacksAndTips": "💡 Kühlschrank-Trick: Dose 20 Min vor Zubereitung kühlen statt Eiswürfel verwenden. 🍱 Meal-Prep: Hält sich 5 Tage im Kühlschrank als Haupt-Beilage. 🥕 Serving-Ideen: Mit Gemüsesticks als Dip, auf Brot als Aufstrich, zu Ofengemüse als Beilage."
     },
     {
       "id": "chili-sin-carne",
